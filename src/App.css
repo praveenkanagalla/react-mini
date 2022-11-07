@@ -172,6 +172,7 @@ nav {
   padding: 50px;
   border-radius: 20px;
   color: #000;
+  margin: auto 0;
 }
 .Article__heading {
   text-align: center;
@@ -215,3 +216,12 @@ input[type="text"], textarea[type="text"] {
   flex-direction: column;
   padding: 25px;
 }
+/* .login__form {
+  margin: auto;
+} */
+.login__input {
+  width: 93%;
+  margin: 10px 0;
+  padding: 12px;
+}
+

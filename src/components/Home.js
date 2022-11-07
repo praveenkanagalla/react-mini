@@ -1,16 +1,21 @@
 import Article from './Article';
 import Cards from './Cards';
+import { useState } from 'react';
 
 const Home = () => {
+  const [selectedData, setSelectedData] = useState({});
 
+  const onArticleClick = (articleData) => {
+    setSelectedData(articleData);
+  }
 
   return (
     <div className="articles">
       <div className='show__article'>
-        <Article />
+        <Article data={selectedData} />
       </div>
       <div className='card__articles'>
-        <Cards />
+        <Cards onArticleClick={onArticleClick} />
       </div>
     </div>
   );
