@@ -9,7 +9,7 @@ const Nav = () => {
 
   return (
     <nav className='App-header'>
-      <a herf="/" className='logo'>SamvidDhi</a>
+      <h2 className='logo'>SamvidDhi</h2>
       <div className='nav__menu'>
         <button className="openModalBtn nav__item" onClick={() => { setModalOpen(true);}}>New Article</button> 
       </div>
@@ -17,7 +17,7 @@ const Nav = () => {
         <button className="nav__item" onClick={() => { setModalOpenLogin(true);}}>Log In</button>
       </div>
       {modalOpen && <Modal setOpenModal={setModalOpen} />}
-      {modalOpenLogin && <Login setOpenModal={setModalOpenLogin} />}
+      {modalOpenLogin && <Login setOpenModalLogin={setModalOpenLogin} />}
     </nav>
   )
 }

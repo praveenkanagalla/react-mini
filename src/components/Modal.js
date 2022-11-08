@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function Modal({ setOpenModal }) {
   const [title, setTitle] = useState('');
@@ -13,12 +13,29 @@ function Modal({ setOpenModal }) {
 
     console.log('articles',JSON.stringify(articles));
     localStorage.setItem('articles',JSON.stringify(articles));
-    setOpenModal(false);
+    setOpenModal(false);    
   }
+
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e)=>{
+      if(!menuRef.current.contains(e.target)){
+        setOpenModal(false); 
+      }      
+    };
+    document.addEventListener("mousedown", handler);    
+
+    return() =>{
+      document.removeEventListener("mousedown", handler);
+    }
+
+  });
 
   return (
     <div className="modalBackground">
-      <div className="modalContainer">
+      <div className="modalContainer" ref={menuRef}>
         <div className="titleCloseBtn">
           <button onClick={() => { setOpenModal(false);}}>X</button>
         </div>
