@@ -21,7 +21,6 @@ html {
 
 nav {
   display: flex;
-  justify-content: start;
   background-color: #282c34;
   color: #fff;
 }
@@ -46,7 +45,6 @@ nav {
 /* article style */
 .articles {
   display: flex;
-  justify-content: start;
 }
 .show__article {
   width: 60%;
@@ -72,12 +70,10 @@ nav {
 }
 .article__title {
   display: flex;
-  justify-content: start;
   font-size: 32px;
 }
 .authers__name {
-  display: flex;
-  justify-content: end;
+  text-align: end;
   padding-top: 20px;
 }
 .article__content {
@@ -103,19 +99,59 @@ nav {
 }
 .card__content {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   display: -webkit-box;
   overflow: hidden;
 }
-.comment__section {
-  padding: 30px 50px 15px;
+
+/* comment section styles */
+.comment__btn-section {
   display: flex;
-  justify-content: end;
+  padding: 30px 0;
 }
-.comment__tag {
+.comment__placeholder {
+  display: inline-block;
+  font-size: 18px;
+  background-color: #eee;
+  padding: 8px 15px;
+  border: none;
+  border-bottom: 1px solid #282c34;
+  outline: none;
+  width: 80%;
+}
+.comment__placeholder:focus-visible {
+  outline: none;
+}
+.comment__btn {
+  display: inline-block;
   cursor: pointer;
   font-size: 18px;
-  border-bottom: 1px solid #282c34;
+  background-color: #eee;
+  padding: 8px 15px;
+  border-radius: 10px;
+  width: 20%;
+}
+.comment__title {
+  font-size: 32px;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+}
+.comment__container {
+  display: flex;
+  margin: 20px 0;
+}
+.user__icon {
+  height: 50px;
+  width: 50px;
+}
+.comment__content {
+  line-height: 25px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  padding: 20px;
+  background-color: #ddd;
+  border-radius:0 20px 20px;
+  margin-left: 10px;
 }
 
 /* Footer Styles */
@@ -216,9 +252,6 @@ input[type="text"], textarea[type="text"] {
   flex-direction: column;
   padding: 25px;
 }
-/* .login__form {
-  margin: auto;
-} */
 .login__input {
   width: 93%;
   margin: 10px 0;

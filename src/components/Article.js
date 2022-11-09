@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 
 const Article = ( {data} ) => {
+
   return (
     <article className='article__container'>
       <div className='article__top-content'>
