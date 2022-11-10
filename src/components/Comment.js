@@ -2,17 +2,19 @@ import React from 'react'
 import UserComments from './UserComments';
 import { useState } from 'react';
 
-const Comment = () => {
+const Comment = ({ addComment, comments }) => {
+
   const [content, setContent] = useState('');
 
   const handleClick = () => {
-    const allComments = JSON.parse(localStorage.getItem('allComments') || "[]");
-    const comment = { content:content };  
-    allComments.push(comment);
-
-    localStorage.setItem('allComments',JSON.stringify(allComments));
-    setContent("");
+    if (content) {
+      addComment({
+        content: content
+      });
+      setContent("");
+    }
   }
+
   return (
     <div>
       <div className='comment__btn-section'>
@@ -21,7 +23,7 @@ const Comment = () => {
       </div>
       <div className="comment__section"> 
         <h2 className="comment__title">Comments</h2>
-        <div><UserComments /></div>
+        <div><UserComments comments={comments} /></div>
       </div>
     </div>
   )

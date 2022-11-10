@@ -8,12 +8,12 @@ function Modal({ setOpenModal }) {
 
   const handleClick = () => {
     const articles = JSON.parse(localStorage.getItem('articles') || "[]");
-    const article = { title:title, auther:auther, body:body };  
-    articles.push(article);
+    const article = { title:title, auther:auther, body:body, comments: [] };  
+    articles.unshift(article);
+    // article = articles;
 
-    console.log('articles',JSON.stringify(articles));
     localStorage.setItem('articles',JSON.stringify(articles));
-    setOpenModal(false);    
+    setOpenModal(false);   
   }
 
 
