@@ -9,7 +9,6 @@ const Home = () => {
 
   const onArticleClick = (articleIndex) => {
     setSelectedIndex(articleIndex);
-    // console.log(selectedData);
   }
 
   const addComment = (commentData) => {
@@ -49,3 +48,5 @@ const Home = () => {
 }
 
 export default Home;
+
+// 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

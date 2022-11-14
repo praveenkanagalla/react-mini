@@ -72,6 +72,17 @@ nav {
   display: flex;
   font-size: 32px;
 }
+.edit__btn-section {
+  width: 100%;
+  text-align: end;
+}
+.edit__btn {
+  font-size: 20px;
+}
+.pencil__icon {
+  width: 20px;
+  height: 20px;
+}
 .authers__name {
   text-align: end;
   padding-top: 20px;
@@ -174,6 +185,8 @@ nav {
   height: 100vh;
   background-color: #282c34;
   position: fixed;
+  left: 0;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,13 +251,23 @@ nav {
 }
 input[type="text"], textarea[type="text"] {
   font-size: 18px;
+  padding: 10px;
 }
 
 
 /* login style */
+.login__background {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .login__Container {
   width: 500px;
-  height: 531px;
+  height: 400px;
   border-radius: 12px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -256,5 +279,7 @@ input[type="text"], textarea[type="text"] {
   width: 93%;
   margin: 10px 0;
   padding: 12px;
+  border: 1px solid #222;
 }
+
 
