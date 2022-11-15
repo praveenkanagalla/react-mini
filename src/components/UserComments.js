@@ -1,4 +1,4 @@
-import user from './user.png'
+import user from './user.png';
 
 const UserComments = ({ comments }) => {
 

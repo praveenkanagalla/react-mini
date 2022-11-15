@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useRef, useEffect } from 'react';
+import user from './user.png';
 
 function Login({ setOpenModalLogin }) {
   const [email, setEmail] = useState('');
@@ -33,16 +34,17 @@ function Login({ setOpenModalLogin }) {
 
 
   return (
-    <div className="modalBackground login__background">
+    <div className="modalBackground login__background" style={{ backgroundImage: "url(./user.png)" }}>
       <div className="modalContainer login__Container" ref={menuRef}>
         <div className="titleCloseBtn">
           <button onClick={() => { setOpenModalLogin(false);}}>X</button>
         </div>
-        <div className='new-article'>
+        <div className='new-article login__content'>
+          <img src={user} className='user__icon user__icon-login' alt='userIcon' />
           <h2 className='Article__heading'>Login Here...</h2>
           <form>
-                <input className='login__input' type="email" name="email" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required="required" />            
-                <input className='login__input' type="password" name="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required="required" />                      
+                <input className='login__input' type="email" name="email" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />            
+                <input className='login__input' type="password" name="password" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />                      
             <input className='article__submit' type="button" value="Login" onClick={handleLoginClick} />
           </form>
         </div>

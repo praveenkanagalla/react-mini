@@ -22,7 +22,7 @@ const Comment = ({ addComment, comments }) => {
         <input className='comment__btn' type="button" value="Post" onClick={handleClick} />
       </div>
       <div className="comment__section"> 
-        <h2 className="comment__title">Comments</h2>
+        <h2 className="comment__title">Comments...</h2>
         <div><UserComments comments={comments} /></div>
       </div>
     </div>

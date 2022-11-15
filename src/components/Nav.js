@@ -13,7 +13,7 @@ const Nav = () => {
       <div className='nav__menu'>
         <button className="openModalBtn nav__item" onClick={() => { setModalOpen(true);}}>New Article</button> 
       </div>
-      <div className="login__content">
+      <div className="login">
         <button className="nav__item" onClick={() => { setModalOpenLogin(true);}}>Log In</button>
       </div>
       {modalOpen && <Modal setOpenModal={setModalOpen} />}

@@ -41,7 +41,7 @@ const Article = ({addComment, data }) => {
         {modalOpenEdit && <EditArticle setOpenModalEdit={setModalOpenEdit} onModalDataChange={onModalDataChange} articleDesc={articleDesc}/>}
         <h3 className="authers__name">- {data.auther}</h3>
       </div>
-      <p className='article__content'>{articleDesc}</p>
+      <div className='article__content'>{articleDesc}</div>
       <Comment comments={data.comments || []} addComment={addComment} />
     </article>
   );
